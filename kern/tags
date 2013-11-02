@@ -1,0 +1,236 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CHECKSUM	entry.S	/^#define CHECKSUM (-(MULTIBOOT_HEADER_MAGIC + MULTIBOOT_HEADER_FLAGS))$/;"	d
+CONSBUFSIZE	cons.c	41;"	d	file:
+CPU_GDT_KCODE	cpu.h	18;"	d
+CPU_GDT_KDATA	cpu.h	19;"	d
+CPU_GDT_NDESC	cpu.h	24;"	d
+CPU_GDT_NULL	cpu.h	17;"	d
+CPU_GDT_TSS	cpu.h	23;"	d
+CPU_GDT_UCODE	cpu.h	20;"	d
+CPU_GDT_UDATA	cpu.h	21;"	d
+CPU_GDT_UDTLS	cpu.h	22;"	d
+CPU_MAGIC	cpu.h	78;"	d
+DEBUG_TRACEFRAMES	cons.h	24;"	d
+DEBUG_TRACEFRAMES	debug.h	20;"	d
+FL_USER	syscall.c	27;"	d	file:
+MEM_EXT	mem.h	26;"	d
+MEM_IO	mem.h	25;"	d
+MPBOOT	mp.h	50;"	d
+MPBUS	mp.h	66;"	d
+MPENAB	mp.h	49;"	d
+MPIOAPIC	mp.h	67;"	d
+MPIOINTR	mp.h	68;"	d
+MPLINTR	mp.h	69;"	d
+MPPROC	mp.h	65;"	d
+MULTIBOOT_HEADER_FLAGS	entry.S	/^#define MULTIBOOT_HEADER_FLAGS (MULTIBOOT_MEMORY_INFO | MULTIBOOT_PAGE_ALIGN)$/;"	d
+MULTIBOOT_HEADER_MAGIC	entry.S	/^#define MULTIBOOT_HEADER_MAGIC (0x1BADB002)$/;"	d
+MULTIBOOT_MEMORY_INFO	entry.S	/^#define MULTIBOOT_MEMORY_INFO (1<<1)$/;"	d
+MULTIBOOT_PAGE_ALIGN	entry.S	/^#define MULTIBOOT_PAGE_ALIGN  (1<<0)$/;"	d
+PIOS_KERN_CONSOLE_H_	cons.h	16;"	d
+PIOS_KERN_DEBUG_H_	debug.h	11;"	d
+PIOS_KERN_INIT_H	init.h	12;"	d
+PIOS_KERN_MEM_H	mem.h	12;"	d
+PIOS_KERN_MP_H	mp.h	13;"	d
+PIOS_KERN_PROC_H	proc.h	11;"	d
+PIOS_KERN_SEG_H	cpu.h	10;"	d
+PIOS_KERN_SPINLOCK_H	spinlock.h	12;"	d
+PIOS_KERN_SYSCALL_H	syscall.h	12;"	d
+PIOS_KERN_TRAP_H	trap.h	12;"	d
+PROC_CHILDREN	proc.h	20;"	d
+PROC_READY	proc.h	/^	PROC_READY,		\/\/ Scheduled to run but not running now$/;"	e	enum:proc_state
+PROC_RUN	proc.h	/^	PROC_RUN,		\/\/ Running on some CPU$/;"	e	enum:proc_state
+PROC_STOP	proc.h	/^	PROC_STOP	= 0,	\/\/ Passively waiting for parent to run it$/;"	e	enum:proc_state
+PROC_WAIT	proc.h	/^	PROC_WAIT,		\/\/ Waiting to synchronize with child$/;"	e	enum:proc_state
+ROOTEXE_START	init.c	34;"	d	file:
+TRAPHANDLER	trapasm.S	/^#define TRAPHANDLER(name, num)						\\$/;"	d
+TRAPHANDLER_NOEC	trapasm.S	/^#define TRAPHANDLER_NOEC(name, num)					\\$/;"	d
+_alltraps	trapasm.S	/^_alltraps:$/;"	l
+addr	mp.h	/^	uint32_t *addr;			\/\/ I\/O APIC address$/;"	m	struct:mpioapic
+apicid	mp.h	/^	uint8_t apicid;			\/\/ local APIC id$/;"	m	struct:mpproc
+apicno	mp.h	/^	uint8_t apicno;			\/\/ I\/O APIC id$/;"	m	struct:mpioapic
+booted	cpu.h	/^	volatile uint32_t booted;$/;"	m	struct:cpu
+buf	cons.c	/^	uint8_t buf[CONSBUFSIZE];$/;"	m	struct:__anon1	file:
+checksum	mp.h	/^	uint8_t checksum;		\/\/ all bytes must add up to 0$/;"	m	struct:mp
+checksum	mp.h	/^	uint8_t checksum;		\/\/ all bytes must add up to 0$/;"	m	struct:mpconf
+checkva	syscall.c	/^static void checkva(trapframe *utf, uint32_t uva, size_t size)$/;"	f	file:
+child	proc.c	/^static void child(int n)$/;"	f	file:
+child	proc.h	/^	struct proc	*child[PROC_CHILDREN];$/;"	m	struct:proc	typeref:struct:proc::proc
+child_state	proc.c	/^static struct procstate child_state;$/;"	v	typeref:struct:procstate	file:
+cons	cons.c	/^} cons;$/;"	v	typeref:struct:__anon1	file:
+cons_getc	cons.c	/^cons_getc(void)$/;"	f
+cons_init	cons.c	/^cons_init(void)$/;"	f
+cons_intr	cons.c	/^cons_intr(int (*proc)(void))$/;"	f
+cons_lock	cons.c	/^spinlock cons_lock;	\/\/ Spinlock to make console output atomic$/;"	v
+cons_putc	cons.c	/^cons_putc(int c)$/;"	f	file:
+cpu	cpu.h	/^typedef struct cpu {$/;"	s
+cpu	cpu.h	/^} cpu;$/;"	t	typeref:struct:cpu
+cpu	spinlock.h	/^	struct cpu *cpu;	\/\/ The cpu holding the lock.$/;"	m	struct:spinlock	typeref:struct:spinlock::cpu
+cpu_alloc	cpu.c	/^cpu_alloc(void)$/;"	f
+cpu_boot	cpu.c	/^cpu cpu_boot = {$/;"	v
+cpu_bootothers	cpu.c	/^cpu_bootothers(void)$/;"	f
+cpu_cur	cpu.h	/^cpu_cur() {$/;"	f
+cpu_disabled	cpu.h	85;"	d
+cpu_init	cpu.c	/^void cpu_init()$/;"	f
+cpu_onboot	cpu.h	/^cpu_onboot() {$/;"	f
+cputs	cons.c	/^cputs(const char *str)$/;"	f
+debug_check	debug.c	/^debug_check(void)$/;"	f
+debug_panic	debug.c	/^debug_panic(const char *file, int line, const char *fmt,...)$/;"	f
+debug_trace	debug.c	/^debug_trace(uint32_t ebp, uint32_t eips[DEBUG_TRACEFRAMES])$/;"	f
+debug_warn	debug.c	/^debug_warn(const char *file, int line, const char *fmt,...)$/;"	f
+do_cputs	syscall.c	/^do_cputs(trapframe *tf, uint32_t cmd)$/;"	f	file:
+do_get	syscall.c	/^static void do_get(trapframe *tf, uint32_t cmd)$/;"	f	file:
+do_put	syscall.c	/^static void do_put(trapframe *tf, uint32_t cmd)$/;"	f	file:
+do_ret	syscall.c	/^static void do_ret(trapframe *tf, uint32_t cmd)$/;"	f	file:
+done	init.c	/^done()$/;"	f
+eips	spinlock.h	/^	uint32_t eips[DEBUG_TRACEFRAMES]; \/\/ Call stack that locked the lock.$/;"	m	struct:spinlock
+entry	mp.h	/^	uint16_t entry;			\/\/ entry count$/;"	m	struct:mpconf
+f1	debug.c	/^static void gcc_noinline f1(int r, uint32_t *e) { r & 1 ? f2(r,e) : f2(r,e); }$/;"	f	file:
+f2	debug.c	/^static void gcc_noinline f2(int r, uint32_t *e) { r & 2 ? f3(r,e) : f3(r,e); }$/;"	f	file:
+f3	debug.c	/^static void gcc_noinline f3(int r, uint32_t *e) { debug_trace(read_ebp(), e); }$/;"	f	file:
+feature	mp.h	/^	uint32_t feature;		\/\/ feature flags from CPUID instruction$/;"	m	struct:mpproc
+file	spinlock.h	/^	const char *file;	\/\/ Source file where spinlock_init() was called$/;"	m	struct:spinlock
+flags	mp.h	/^	uint8_t flags;			\/\/ CPU flags$/;"	m	struct:mpproc
+flags	mp.h	/^	uint8_t flags;			\/\/ I\/O APIC flags$/;"	m	struct:mpioapic
+free_next	mem.h	/^	struct pageinfo	*free_next;	\/\/ Next page number on free list$/;"	m	struct:pageinfo	typeref:struct:pageinfo::pageinfo
+gdt	cpu.h	/^	segdesc		gdt[CPU_GDT_NDESC];$/;"	m	struct:cpu
+grandchild	proc.c	/^static void grandchild(int n)$/;"	f	file:
+id	cpu.h	/^	uint8_t		id;$/;"	m	struct:cpu
+idt	trap.c	/^static struct gatedesc idt[256];$/;"	v	typeref:struct:gatedesc	file:
+idt_pd	trap.c	/^static struct pseudodesc idt_pd = {$/;"	v	typeref:struct:pseudodesc	file:
+imcrp	mp.h	/^	uint8_t imcrp;$/;"	m	struct:mp
+init	init.c	/^init(void)$/;"	f
+ioapic	mp.c	/^volatile struct ioapic *ioapic;$/;"	v	typeref:struct:ioapic
+ioapicid	mp.c	/^uint8_t ioapicid;$/;"	v
+ismp	mp.c	/^int ismp;$/;"	v
+kstackhi	cpu.h	/^	char gcc_aligned(PAGESIZE) kstackhi[0];$/;"	m	struct:cpu
+kstacklo	cpu.h	/^	char		kstacklo[1];$/;"	m	struct:cpu
+lapicaddr	mp.h	/^	uint32_t *lapicaddr;		\/\/ address of local APIC$/;"	m	struct:mpconf
+length	mp.h	/^	uint16_t length;		\/\/ total table length$/;"	m	struct:mpconf
+length	mp.h	/^	uint8_t length;			\/\/ 1$/;"	m	struct:mp
+line	spinlock.h	/^	int line;		\/\/ Line number of spinlock_init()$/;"	m	struct:spinlock
+lock	proc.h	/^	spinlock	lock;$/;"	m	struct:proc
+locked	spinlock.h	/^	uint32_t locked;	\/\/ Is the lock held?$/;"	m	struct:spinlock
+magic	cpu.h	/^	uint32_t	magic;$/;"	m	struct:cpu
+mem_alloc	mem.c	/^mem_alloc(void)$/;"	f
+mem_check	mem.c	/^mem_check()$/;"	f
+mem_decref	mem.h	/^mem_decref(pageinfo* pi, void (*freefun)(pageinfo *pi))$/;"	f
+mem_free	mem.c	/^mem_free(pageinfo *pi)$/;"	f
+mem_freelist	mem.c	/^pageinfo *mem_freelist;		\/\/ Start of free page list$/;"	v
+mem_incref	mem.h	/^mem_incref(pageinfo *pi)$/;"	f
+mem_init	mem.c	/^mem_init(void)$/;"	f
+mem_lock	mem.c	/^spinlock mem_lock;$/;"	v
+mem_max	mem.c	/^size_t mem_max;			\/\/ Maximum physical address$/;"	v
+mem_npage	mem.c	/^size_t mem_npage;		\/\/ Total number of physical memory pages$/;"	v
+mem_pageinfo	mem.c	/^pageinfo *mem_pageinfo;		\/\/ Metadata array indexed by page number$/;"	v
+mem_phys	mem.h	38;"	d
+mem_phys2pi	mem.h	58;"	d
+mem_pi2phys	mem.h	59;"	d
+mem_pi2ptr	mem.h	61;"	d
+mem_ptr	mem.h	35;"	d
+mem_ptr2pi	mem.h	60;"	d
+mp	mp.h	/^struct mp {            	\/\/ MP floating pointer structure$/;"	s
+mp_init	mp.c	/^mp_init(void)$/;"	f
+mpconf	mp.h	/^struct mpconf {         \/\/ configuration table header$/;"	s
+mpconfig	mp.c	/^mpconfig(struct mp **pmp) {$/;"	f	file:
+mpioapic	mp.h	/^struct mpioapic {       \/\/ I\/O APIC table entry$/;"	s
+mpproc	mp.h	/^struct mpproc {         \/\/ processor table entry$/;"	s
+mpsearch	mp.c	/^mpsearch(void)$/;"	f	file:
+mpsearch1	mp.c	/^mpsearch1(uint8_t * addr, int len)$/;"	f	file:
+name	trapasm.S	/^	name:								\\$/;"	l
+name	trapasm.S	/^	name:			\/* function starts here *\/		\\$/;"	l
+ncpu	mp.c	/^int ncpu;$/;"	v
+next	cpu.h	/^	struct cpu	*next;$/;"	m	struct:cpu	typeref:struct:cpu::cpu
+oemlength	mp.h	/^	uint16_t oemlength;		\/\/ OEM table length$/;"	m	struct:mpconf
+oemtable	mp.h	/^	uint32_t *oemtable;		\/\/ OEM table pointer$/;"	m	struct:mpconf
+pageinfo	mem.h	/^typedef struct pageinfo {$/;"	s
+pageinfo	mem.h	/^} pageinfo;$/;"	t	typeref:struct:pageinfo
+panicstr	debug.c	/^static const char *panicstr;$/;"	v	file:
+parent	proc.h	/^	struct proc	*parent;$/;"	m	struct:proc	typeref:struct:proc::proc
+physaddr	mp.h	/^	void *physaddr;			\/\/ phys addr of MP config table$/;"	m	struct:mp
+pingpong	proc.c	/^static volatile uint32_t pingpong = 0;$/;"	v	file:
+proc	cpu.h	/^	struct proc	*proc;$/;"	m	struct:cpu	typeref:struct:cpu::proc
+proc	proc.h	/^typedef struct proc {$/;"	s
+proc	proc.h	/^} proc;$/;"	t	typeref:struct:proc
+proc_alloc	proc.c	/^proc_alloc(proc *p, uint32_t cn)$/;"	f
+proc_check	proc.c	/^proc_check(void)$/;"	f
+proc_cur	proc.h	50;"	d
+proc_first	proc.c	/^proc* proc_first;$/;"	v
+proc_init	proc.c	/^proc_init(void)$/;"	f
+proc_last	proc.c	/^proc* proc_last;$/;"	v
+proc_lock	proc.c	/^spinlock proc_lock;$/;"	v
+proc_null	proc.c	/^proc proc_null;		\/\/ null process - just leave it initialized to 0$/;"	v
+proc_ready	proc.c	/^proc_ready(proc *p)$/;"	f
+proc_ret	proc.c	/^proc_ret(trapframe *tf, int entry)$/;"	f
+proc_root	proc.c	/^proc *proc_root;	\/\/ root process, once it's created in init()$/;"	v
+proc_run	proc.c	/^proc_run(proc *p)$/;"	f
+proc_save	proc.c	/^proc_save(proc *p, trapframe *tf, int entry)$/;"	f
+proc_sched	proc.c	/^proc_sched(void)$/;"	f
+proc_state	proc.h	/^typedef enum proc_state {$/;"	g
+proc_state	proc.h	/^} proc_state;$/;"	t	typeref:enum:proc_state
+proc_wait	proc.c	/^proc_wait(proc *p, proc *cp, trapframe *tf)$/;"	f
+proc_yield	proc.c	/^proc_yield(trapframe *tf)$/;"	f
+product	mp.h	/^	uint8_t product[20];		\/\/ product id$/;"	m	struct:mpconf
+readynext	proc.h	/^	struct proc	*readynext;	\/\/ chain on ready queue$/;"	m	struct:proc	typeref:struct:proc::proc
+recovargs	proc.c	/^static void *recovargs;$/;"	v	file:
+recover	cpu.h	/^	gcc_noreturn void (*recover)(trapframe *tf, void *recoverdata);$/;"	m	struct:cpu
+recoverdata	cpu.h	/^	void		*recoverdata;$/;"	m	struct:cpu
+refcount	mem.h	/^	int32_t	refcount;		\/\/ Reference count on allocated pages$/;"	m	struct:pageinfo
+reip	trap.h	/^	void *reip;		\/\/ In: EIP at which to resume trapping code$/;"	m	struct:trap_check_args
+reserved	mp.h	/^	uint8_t reserved;$/;"	m	struct:mpconf
+reserved	mp.h	/^	uint8_t reserved[3];$/;"	m	struct:mp
+reserved	mp.h	/^	uint8_t reserved[8];$/;"	m	struct:mpproc
+rpos	cons.c	/^	uint32_t rpos;$/;"	m	struct:__anon1	file:
+runcpu	proc.h	/^	struct cpu	*runcpu;	\/\/ cpu we're running on if running$/;"	m	struct:proc	typeref:struct:proc::cpu
+signature	mp.h	/^	uint8_t signature[4];		\/\/ "PCMP"$/;"	m	struct:mpconf
+signature	mp.h	/^	uint8_t signature[4];		\/\/ "_MP_"$/;"	m	struct:mp
+signature	mp.h	/^	uint8_t signature[4];		\/\/ CPU signature$/;"	m	struct:mpproc
+specrev	mp.h	/^	uint8_t specrev;		\/\/ [14]$/;"	m	struct:mp
+spin	entry.S	/^spin:	jmp	spin$/;"	l
+spinlock	spinlock.h	/^typedef struct spinlock {$/;"	s
+spinlock	spinlock.h	/^} spinlock;$/;"	t	typeref:struct:spinlock
+spinlock_acquire	spinlock.c	/^spinlock_acquire(struct spinlock *lk)$/;"	f
+spinlock_check	spinlock.c	/^void spinlock_check()$/;"	f
+spinlock_godeep	spinlock.c	/^spinlock_godeep(volatile int depth, spinlock* lk)$/;"	f
+spinlock_holding	spinlock.c	/^spinlock_holding(spinlock *lock)$/;"	f
+spinlock_init	spinlock.h	33;"	d
+spinlock_init_	spinlock.c	/^spinlock_init_(struct spinlock *lk, const char *file, int line)$/;"	f
+spinlock_release	spinlock.c	/^spinlock_release(struct spinlock *lk)$/;"	f
+start	entry.S	/^start: _start:$/;"	l
+state	proc.h	/^	proc_state	state;		\/\/ current state$/;"	m	struct:proc
+sum	mp.c	/^sum(uint8_t * addr, int len)$/;"	f	file:
+sv	proc.h	/^	procstate	sv;$/;"	m	struct:proc
+syscall	syscall.c	/^syscall(trapframe *tf)$/;"	f
+sysrecover	syscall.c	/^sysrecover(trapframe *ktf, void *recoverdata)$/;"	f	file:
+systrap	syscall.c	/^systrap(trapframe *utf, int trapno, int err)$/;"	f	file:
+trap	trap.c	/^trap(trapframe *tf)$/;"	f
+trap_check	trap.c	/^trap_check(void **argsp)$/;"	f
+trap_check_args	trap.h	/^typedef struct trap_check_args {$/;"	s
+trap_check_args	trap.h	/^} trap_check_args;$/;"	t	typeref:struct:trap_check_args
+trap_check_kernel	trap.c	/^trap_check_kernel(void)$/;"	f
+trap_check_recover	trap.c	/^trap_check_recover(trapframe *tf, void *recoverdata)$/;"	f	file:
+trap_check_user	trap.c	/^trap_check_user(void)$/;"	f
+trap_init	trap.c	/^trap_init(void)$/;"	f
+trap_init_idt	trap.c	/^trap_init_idt(void)$/;"	f	file:
+trap_name	trap.c	/^const char *trap_name(int trapno)$/;"	f
+trap_print	trap.c	/^trap_print(trapframe *tf)$/;"	f
+trap_print_regs	trap.c	/^trap_print_regs(pushregs *regs)$/;"	f
+trap_return	trapasm.S	/^trap_return:$/;"	l
+trapno	trap.h	/^	int trapno;		\/\/ Out: trap number from trapframe$/;"	m	struct:trap_check_args
+tss	cpu.h	/^	taskstate	tss;$/;"	m	struct:cpu
+type	mp.h	/^	uint8_t type;			\/\/ MP system config type$/;"	m	struct:mp
+type	mp.h	/^	uint8_t type;			\/\/ entry type (0)$/;"	m	struct:mpproc
+type	mp.h	/^	uint8_t type;			\/\/ entry type (2)$/;"	m	struct:mpioapic
+user	init.c	/^user()$/;"	f
+usercopy	syscall.c	/^void usercopy(trapframe *utf, bool copyout,$/;"	f
+version	mp.h	/^	uint8_t version;		\/\/ I\/O APIC version$/;"	m	struct:mpioapic
+version	mp.h	/^	uint8_t version;		\/\/ [14]$/;"	m	struct:mpconf
+version	mp.h	/^	uint8_t version;		\/\/ local APIC version$/;"	m	struct:mpproc
+waitchild	proc.h	/^	struct proc	*waitchild;	\/\/ child proc if waiting for child$/;"	m	struct:proc	typeref:struct:proc::proc
+wpos	cons.c	/^	uint32_t wpos;$/;"	m	struct:__anon1	file:
+xchecksum	mp.h	/^	uint8_t xchecksum;		\/\/ extended table checksum$/;"	m	struct:mpconf
+xlength	mp.h	/^	uint16_t xlength;		\/\/ extended table length$/;"	m	struct:mpconf

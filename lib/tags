@@ -1,0 +1,55 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ASM	string.c	16;"	d	file:
+CPUTS_MAX	cprintf.c	28;"	d	file:
+F_ALT	printfmt.c	38;"	d	file:
+F_DOT	printfmt.c	39;"	d	file:
+F_L	printfmt.c	36;"	d	file:
+F_LL	printfmt.c	37;"	d	file:
+F_RPAD	printfmt.c	40;"	d	file:
+base	printfmt.c	/^	int base;		\/\/ base for numeric output$/;"	m	struct:printstate	file:
+buf	cprintf.c	/^	char buf[CPUTS_MAX];$/;"	m	struct:printbuf	file:
+cnt	cprintf.c	/^	int cnt;	\/\/ total bytes printed so far$/;"	m	struct:printbuf	file:
+cprintf	cprintf.c	/^cprintf(const char *fmt, ...)$/;"	f
+flags	printfmt.c	/^	int flags;		\/\/ flags below$/;"	m	struct:printstate	file:
+genfint	printfmt.c	/^genfint(printstate *st, char *p, double num)$/;"	f	file:
+genfrac	printfmt.c	/^genfrac(printstate *st, char *p, double num, int fmtch)$/;"	f	file:
+genint	printfmt.c	/^genint(printstate *st, char *p, uintmax_t num)$/;"	f	file:
+getint	printfmt.c	/^getint(printstate *st, va_list *ap)$/;"	f	file:
+getuint	printfmt.c	/^getuint(printstate *st, va_list *ap)$/;"	f	file:
+idx	cprintf.c	/^	int idx;	\/\/ current buffer index$/;"	m	struct:printbuf	file:
+memchr	string.c	/^memchr(const void *s, int c, size_t n)$/;"	f
+memcmp	string.c	/^memcmp(const void *v1, const void *v2, size_t n)$/;"	f
+memcpy	string.c	/^memcpy(void *dst, const void *src, size_t n)$/;"	f
+memmove	string.c	/^memmove(void *dst, const void *src, size_t n)$/;"	f
+memset	string.c	/^memset(void *v, int c, size_t n)$/;"	f
+padc	printfmt.c	/^	int padc;		\/\/ left pad character, ' ' or '0'$/;"	m	struct:printstate	file:
+prec	printfmt.c	/^	int prec;		\/\/ numeric precision or string length, -1=none$/;"	m	struct:printstate	file:
+printbuf	cprintf.c	/^struct printbuf {$/;"	s	file:
+printstate	printfmt.c	/^typedef struct printstate {$/;"	s	file:
+printstate	printfmt.c	/^} printstate;$/;"	t	typeref:struct:printstate	file:
+putch	cprintf.c	/^putch(int ch, struct printbuf *b)$/;"	f	file:
+putch	printfmt.c	/^	void (*putch)(int ch, void *putdat);	\/\/ character output function$/;"	m	struct:printstate	file:
+putdat	printfmt.c	/^	void *putdat;		\/\/ data for above function$/;"	m	struct:printstate	file:
+putfinf	printfmt.c	/^putfinf(printstate *st, const char *str)$/;"	f	file:
+putflexp	printfmt.c	/^putflexp(printstate *st, double num, int l10, int fmtch)$/;"	f	file:
+putflgen	printfmt.c	/^putflgen(printstate *st, double num, int l10, int fmtch)$/;"	f	file:
+putfloat	printfmt.c	/^putfloat(printstate *st, double num, int l10, int fmtch)$/;"	f	file:
+putint	printfmt.c	/^putint(printstate *st, uintmax_t num, int base)$/;"	f	file:
+putpad	printfmt.c	/^putpad(printstate *st)$/;"	f	file:
+putstr	printfmt.c	/^putstr(printstate *st, const char *str, int maxlen)$/;"	f	file:
+signc	printfmt.c	/^	int signc;		\/\/ sign character: '+', '-', ' ', or -1=none$/;"	m	struct:printstate	file:
+strchr	string.c	/^strchr(const char *s, char c)$/;"	f
+strcmp	string.c	/^strcmp(const char *p, const char *q)$/;"	f
+strcpy	string.c	/^strcpy(char *dst, const char *src)$/;"	f
+strlcpy	string.c	/^strlcpy(char *dst, const char *src, size_t size)$/;"	f
+strlen	string.c	/^strlen(const char *s)$/;"	f
+strncmp	string.c	/^strncmp(const char *p, const char *q, size_t n)$/;"	f
+strncpy	string.c	/^strncpy(char *dst, const char *src, size_t size)$/;"	f
+vcprintf	cprintf.c	/^vcprintf(const char *fmt, va_list ap)$/;"	f
+vprintfmt	printfmt.c	/^vprintfmt(void (*putch)(int, void*), void *putdat, const char *fmt, va_list ap)$/;"	f
+width	printfmt.c	/^	int width;		\/\/ field width, -1=none$/;"	m	struct:printstate	file:

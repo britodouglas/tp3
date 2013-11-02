@@ -1,0 +1,122 @@
+cpu_init complete
+initializing idt
+TRAP frame at 0x10bec0
+  edi  0x00000000
+  esi  0x00010094
+  ebp  0x0010bf4c
+  ebx  0x00010094
+  edx  0x0010bf24
+  ecx  0x0011eca0
+  eax  0x00000000
+  es   0x----0010
+  ds   0x----0010
+  trap 0x00000000 Divide error
+  err  0x00000000
+  eip  0x001025ab
+  cs   0x----0008
+  flag 0x00000012
+  esp  0x00000000
+  ss   0x----0000
+reip = 1058221
+TRAP frame at 0x10bec0
+  edi  0x00000000
+  esi  0x00010094
+  ebp  0x0010bf4c
+  ebx  0x00010094
+  edx  0x0010bf24
+  ecx  0x0011eca0
+  eax  0xfeedface
+  es   0x----0010
+  ds   0x----0010
+  trap 0x00000003 Breakpoint
+  err  0x00000000
+  eip  0x0010260e
+  cs   0x----0008
+  flag 0x00000046
+  esp  0x00000000
+  ss   0x----0000
+reip = 1058318
+TRAP frame at 0x10bec0
+  edi  0x00000000
+  esi  0x00010094
+  ebp  0x0010bf4c
+  ebx  0x00010094
+  edx  0x0010bf24
+  ecx  0x0011eca0
+  eax  0xe0000000
+  es   0x----0010
+  ds   0x----0010
+  trap 0x00000004 Overflow
+  err  0x00000000
+  eip  0x00102649
+  cs   0x----0008
+  flag 0x00000886
+  esp  0x00000000
+  ss   0x----0000
+reip = 1058377
+TRAP frame at 0x10bec0
+  edi  0x00000000
+  esi  0x00010094
+  ebp  0x0010bf4c
+  ebx  0x00010094
+  edx  0x0010bf24
+  ecx  0x0011eca0
+  eax  0x00000000
+  es   0x----0010
+  ds   0x----0010
+  trap 0x00000005 BOUND Range Exceeded
+  err  0x00000000
+  eip  0x0010268f
+  cs   0x----0008
+  flag 0x00000046
+  esp  0x00000000
+  ss   0x----0000
+reip = 1058450
+TRAP frame at 0x10bec0
+  edi  0x00000000
+  esi  0x00010094
+  ebp  0x0010bf4c
+  ebx  0x00010094
+  edx  0x0010bf24
+  ecx  0x0011eca0
+  eax  0x00000005
+  es   0x----0010
+  ds   0x----0010
+  trap 0x00000006 Invalid Opcode
+  err  0x00000000
+  eip  0x001026c5
+  cs   0x----0008
+  flag 0x00000046
+  esp  0x00000000
+  ss   0x----0000
+reip = 1058503
+TRAP frame at 0x10bec0
+  edi  0x00000000
+  esi  0x00010094
+  ebp  0x0010bf4c
+  ebx  0x00010094
+  edx  0x0010bf24
+  ecx  0x0011eca0
+  eax  0xffffffff
+  es   0x----0010
+  ds   0x----0010
+  trap 0x0000000d General Protection
+  err  0x0000fffc
+  eip  0x001026ff
+  cs   0x----0008
+  flag 0x00000046
+  esp  0x00000000
+  ss   0x----0000
+reip = 1058561
+trap_check_kernel() succeeded!
+kernel warning at kern/mem.c:53: Assuming we have 1GB of memory!
+Physical memory: 1048576K available, base = 640K, extended = 1047552K
+kernel end 0x122008, pageinfo 0x123000
+num pages 262144, pagetable takes 512 pages
+mem_check: 261499 free pages
+mem_check() succeeded!
+spinlock_check() succeeded!
+kernel panic at kern/pmap.c:63: pmap_init() not implemented
+  from 00104637
+  from 001000f2
+  from 00100024
